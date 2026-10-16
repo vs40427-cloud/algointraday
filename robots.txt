@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://algointraday.netlify.app/sitemap.xml

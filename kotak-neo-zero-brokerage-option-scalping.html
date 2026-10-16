@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotak Neo &amp; Angel One Option Buying Scalping Algo Setup Guide — Algo Intraday</title>
+  <meta name="description" content="Step-by-step guide to automating intraday Nifty &amp; Bank Nifty option buying scalping with Kotak Neo, Angel One SmartAPI, Upstox, and Groww in under 15ms.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://algointraday.netlify.app/kotak-neo-zero-brokerage-option-scalping.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { background: #020617; color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-heading { font-family: 'Space Grotesk', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .glass { background: rgba(15, 23, 42, 0.78); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.09); }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between border-b border-white/10">
+    <a href="/" class="flex items-center gap-3 font-heading font-extrabold text-xl text-white">
+      <img src="logo.png" alt="Algo Intraday Logo" width="36" height="36" class="rounded-lg" />
+      <span>Algo<span class="text-cyan-400">Intraday</span></span>
+    </a>
+    <div class="flex items-center gap-4 text-xs sm:text-sm font-mono">
+      <a href="/" class="text-slate-300 hover:text-cyan-400">← Back to Home</a>
+      <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-emerald-400 text-black font-bold">Get Pro License</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-14 space-y-12">
+    <div class="space-y-4">
+      <span class="text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-full bg-emerald-400/10 text-emerald-400 border border-emerald-400/30">Broker API Integration Guide</span>
+      <h1 class="font-heading text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+        Kotak Neo, Angel One, Upstox &amp; Groww Intraday Option Scalping Algo Setup
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        High-frequency intraday option scalpers capturing 5 to 15 points on Nifty and Bank Nifty CE/PE strikes need two things: <strong>low brokerage overhead</strong> and <strong>sub-15ms direct WebSocket order routing</strong>. Learn how Algo Intraday connects directly to your broker API.
+      </p>
+    </div>
+
+    <section class="glass rounded-3xl p-8 space-y-6">
+      <h2 class="font-heading text-2xl font-bold text-white">Supported Broker APIs Compared for Option Buyers</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left font-mono text-xs sm:text-sm">
+          <thead class="border-b border-white/10 text-emerald-400">
+            <tr>
+              <th class="py-3">Broker</th>
+              <th class="py-3">API Protocol</th>
+              <th class="py-3">Best For</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 text-slate-200">
+            <tr>
+              <td class="py-3 font-bold">Kotak Neo</td>
+              <td class="py-3">Neo TradeAPI + WebSocket</td>
+              <td class="py-3">High-frequency CE/PE scalpers minimizing per-order brokerage costs</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold">Angel One</td>
+              <td class="py-3">SmartAPI + TOTP Auto-Auth</td>
+              <td class="py-3">Ultra-stable index tick streaming &amp; fast momentum order dispatch</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold">Upstox</td>
+              <td class="py-3">Upstox API v2 WebSocket</td>
+              <td class="py-3">Rapid option chain Greek updates &amp; disciplined Stop-Loss locks</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold">Groww</td>
+              <td class="py-3">Direct F&amp;O Execution Bridge</td>
+              <td class="py-3">Retail index option buyers transitioning from manual UI to rule-based execution</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="glass rounded-3xl p-8 space-y-4">
+      <h2 class="font-heading text-2xl font-bold text-white">3-Minute Daily Morning Token Setup</h2>
+      <ol class="list-decimal list-inside space-y-3 text-slate-300 text-sm leading-relaxed">
+        <li><strong>Launch AlgoIntraday.exe:</strong> Open the Windows desktop control hub before 9:10 AM IST.</li>
+        <li><strong>Enter Broker API Key &amp; TOTP Secret:</strong> Paste your Angel One, Kotak Neo, Upstox, or Groww API credentials once — the software auto-generates encrypted session tokens.</li>
+        <li><strong>Select Index &amp; Strike:</strong> Pick Nifty 50, Bank Nifty, FinNifty, Midcap Nifty, or Sensex, set your trigger spot/strike, Stop-Loss, and Target, and toggle to <strong>ARMED</strong>.</li>
+      </ol>
+    </section>
+
+    <div class="glass rounded-3xl p-8 text-center space-y-4 border border-cyan-400/40">
+      <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Start Scalping With Sub-15ms API Execution</h2>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto">Try Paper Mode or connect your live broker account today with our 7-Day Free Trial.</p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="/#download" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-400 to-cyan-400 text-black font-heading font-extrabold text-sm">Download .EXE (Free Trial)</a>
+        <a href="/#license" class="px-6 py-3.5 rounded-2xl bg-white/10 text-white font-heading font-bold text-sm">See License Plans</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

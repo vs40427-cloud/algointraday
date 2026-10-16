@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Algo Intraday | Pro License Plans for Algo Trading</title>
+  <meta name="description" content="Algo Intraday pricing: Tester Plan ₹999/month, Pro Plan ₹4,999/6 months (save 20%), Founder's Club ₹8,999 lifetime. All plans include Angel One, Kotak Neo, Groww, Upstox integration. 7-day free trial.">
+  <link rel="canonical" href="https://algointraday.netlify.app/pricing">
+  <meta property="og:title" content="Pricing — Algo Intraday | Pro License Plans for Algo Trading">
+  <meta property="og:description" content="Algo Intraday pricing: Tester Plan ₹999/mo, Pro Plan ₹4,999/6mo (save 20%), Founder's Club ₹8,999 lifetime. 7-day free trial included.">
+  <meta property="og:image" content="https://algointraday.netlify.app/logo.png">
+  <meta property="og:url" content="https://algointraday.netlify.app/pricing">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Algo Intraday">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pricing — Algo Intraday">
+  <meta name="twitter:description" content="Tester ₹999/mo, Pro ₹4,999/6mo, Founder's Club ₹8,999 lifetime. 7-day free trial.">
+<meta name="twitter:image" content="https://algointraday.netlify.app/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../logo.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            void: '#020617',
+            deep: '#030712',
+            surface: 'rgba(15, 23, 42, 0.75)',
+            surfaceHover: 'rgba(30, 41, 59, 0.85)',
+            cyanGlow: '#00f2fe',
+            emeraldGlow: '#00ff87',
+            purpleGlow: '#8a2be2',
+            crimsonAlert: '#ff3366',
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          boxShadow: {
+            'glow-cyan': '0 0 40px rgba(0, 242, 254, 0.35)',
+            'glow-emerald': '0 0 40px rgba(0, 255, 135, 0.35)',
+            'glow-purple': '0 0 40px rgba(138, 43, 226, 0.35)',
+            'glow-amber': '0 0 30px rgba(251, 191, 36, 0.35)',
+            'glow-card': '0 25px 60px rgba(0, 0, 0, 0.85), 0 0 1px rgba(0, 242, 254, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #020617; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #00f2fe; }
+    .preserve-3d { transform-style: preserve-3d; }
+    .perspective-2000 { perspective: 2000px; }
+    .glass-panel { background: rgba(15, 23, 42, 0.72); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .glass-card-glow { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .glass-card-glow:hover { background: rgba(22, 33, 62, 0.85); border-color: rgba(0, 242, 254, 0.5); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 242, 254, 0.3); transform: translateY(-8px) scale(1.02); }
+    .gradient-text-cyan { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #00ff87 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .gradient-text-emerald { background: linear-gradient(135deg, #00ff87 0%, #60efff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .gradient-text-purple { background: linear-gradient(135deg, #c084fc 0%, #8a2be2 50%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .orb-glow { position: fixed; border-radius: 50%; filter: blur(150px); pointer-events: none; z-index: -1; opacity: 0.24; animation: pulseOrb 18s infinite alternate ease-in-out; }
+    @keyframes pulseOrb { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(70px, 90px) scale(1.18); } 100% { transform: translate(-50px, 50px) scale(0.92); } }
+    .tilt-card-specular { position: relative; overflow: hidden; }
+    .tilt-card-specular::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.09) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .tilt-card-specular:hover::before { opacity: 1; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Pricing - Algo Intraday",
+  "description": "Algo Intraday license pricing plans for algorithmic trading software",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://algointraday.netlify.app/pricing"
+  }
+}
+</script>
+</head>
+<body class="bg-void text-slate-100 font-sans antialiased selection:bg-cyanGlow selection:text-void relative overflow-x-hidden">
+  <canvas id="three-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+  <div class="orb-glow w-[550px] h-[550px] bg-cyanGlow top-[-10%] left-[10%]"></div>
+  <div class="orb-glow w-[520px] h-[520px] bg-purpleGlow top-[35%] right-[-5%]"></div>
+  <div class="orb-glow w-[650px] h-[650px] bg-emeraldGlow bottom-[5%] left-[20%]"></div>
+
+  <header class="fixed top-6 inset-x-0 z-50 flex justify-center px-4">
+    <nav class="glass-panel rounded-full px-6 py-3 flex items-center justify-between gap-8 w-full max-w-5xl shadow-2xl border border-white/10">
+      <a href="../index.html" onclick="SoundFX.click()" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded-2xl bg-slate-900/90 border border-cyanGlow/40 p-1 flex items-center justify-center shadow-glow-cyan transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 overflow-hidden">
+          <img src="../logo.png" alt="Algo Intraday Logo" class="w-full h-full object-contain rounded-xl"  />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-extrabold text-lg tracking-tight text-white flex items-center gap-1">
+            Algo<span class="gradient-text-cyan">Intraday</span>
+          </span>
+          <span class="text-[10px] font-mono text-cyanGlow font-semibold uppercase tracking-widest -mt-0.5">V1.0 PRO ENGINE</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+        <a href="../index.html" onclick="SoundFX.click()" class="hover:text-cyanGlow transition-colors duration-200">Home</a>
+        <a href="../features" onclick="SoundFX.click()" class="hover:text-cyanGlow transition-colors duration-200">Features</a>
+        <a href="../pricing" onclick="SoundFX.click()" class="hover:text-emeraldGlow transition-colors duration-200 font-bold text-emeraldGlow">Pricing</a>
+        <a href="../brokers" onclick="SoundFX.click()" class="hover:text-cyanGlow transition-colors duration-200">Brokers</a>
+        <a href="../faq" onclick="SoundFX.click()" class="hover:text-cyanGlow transition-colors duration-200">FAQ</a>
+        <a href="../blog" onclick="SoundFX.click()" class="hover:text-cyanGlow transition-colors duration-200">Blog</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" onclick="triggerRazorpayAction()" class="relative group overflow-hidden rounded-full p-[1px]">
+          <span class="absolute inset-0 bg-gradient-to-r from-emeraldGlow via-cyanGlow to-purpleGlow animate-pulse"></span>
+          <span class="relative px-5 py-2 rounded-full bg-slate-950 font-heading font-bold text-xs uppercase tracking-wider text-white flex items-center gap-2 group-hover:bg-opacity-90 transition-all">
+            <i class="fa-solid fa-key text-emeraldGlow"></i>
+            <span>Get License</span>
+          </span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="relative min-h-screen pt-36 pb-20 flex items-center z-10">
+    <div class="max-w-7xl mx-auto px-6 w-full">
+      <div class="text-center max-w-4xl mx-auto mb-20">
+        <span class="text-xs font-mono font-bold text-emeraldGlow uppercase tracking-widest bg-emeraldGlow/10 px-4 py-1.5 rounded-full border border-emeraldGlow/20">
+          Official Razorpay Gateway
+        </span>
+        <h1 class="font-heading text-4xl sm:text-5xl xl:text-6xl font-extrabold text-white mt-4 tracking-tight">
+          Algo Intraday — <span class="gradient-text-emerald">Pro Access Plans</span>
+        </h1>
+        <p class="text-slate-300 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+          Transparent, no-hidden-fees pricing. Choose the plan that fits your trading journey. 
+          All plans include full broker integration, Black-Scholes Greeks engine, and dual paper/live mode.
+        </p>
+        
+        <div class="mt-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emeraldGlow/10 to-amber-500/10 border border-amber-400/40 shadow-lg text-left sm:text-center max-w-3xl mx-auto">
+          <div class="flex items-center justify-center gap-2 text-amber-300 font-heading font-extrabold text-xs sm:text-sm tracking-wider uppercase mb-1">
+            <i class="fa-solid fa-fire text-amber-400 animate-bounce"></i>
+            <span>SPECIAL EARLY BIRD OFFER (LIMITED TO FIRST 50 MEMBERS)</span>
+          </div>
+          <p class="text-slate-200 text-xs sm:text-sm font-sans font-medium leading-relaxed max-w-3xl mx-auto">
+            The current heavily discounted pricing is strictly valid for the <strong>FIRST 50 MEMBERS ONLY</strong>. 
+            Once the first 50 licenses are claimed, prices will be permanently increased. Secure your spot today!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing-plans" class="relative py-28 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="glass-panel rounded-3xl p-8 border border-white/10 hover:border-cyanGlow/40 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs font-mono font-bold text-cyanGlow uppercase tracking-wider bg-cyanGlow/10 px-3 py-1 rounded-full">Tester Edition</span>
+              <span class="text-slate-400 text-xs font-mono">1 Month</span>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white mb-2">Tester Plan (1 Month)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">Ideal for traders testing automated execution on index options before committing longer-term.</p>
+            <div class="font-mono mb-6">
+              <span class="text-4xl font-extrabold text-white">₹999.00</span>
+              <span class="text-slate-400 text-xs"> / 1 month</span>
+              <div class="text-[11px] text-emeraldGlow font-bold mt-1">Excludes 7-Day Free Trial</div>
+            </div>
+            <ul class="space-y-3 text-xs text-slate-300 font-mono mb-8">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> 1 Active Device Hardware License</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Nifty 50, Bank Nifty & FinNifty</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Angel One, Kotak Neo, Groww, Upstox</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Dual Mode (Paper + Live Real)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Black-Scholes Greeks Engine</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Instant Digital License Key</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> ESC Global Panic Kill-Switch</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> CSV Tradebook Export</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Standard Email Support</li>
+            </ul>
+          </div>
+          <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" onclick="triggerRazorpayAction()" class="w-full py-4 rounded-2xl bg-white/10 hover:bg-cyanGlow hover:text-black font-heading font-bold text-sm text-white transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-credit-card text-xs"></i>
+            <span>Get Tester Plan (₹999)</span>
+          </a>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-8 border-2 border-emeraldGlow shadow-glow-emerald flex flex-col justify-between transition-all relative transform md:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-emeraldGlow to-cyanGlow text-black font-heading font-extrabold text-[11px] uppercase tracking-wider shadow-md">
+            MOST POPULAR CHOICE
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-4 mt-2">
+              <span class="text-xs font-mono font-bold text-emeraldGlow uppercase tracking-wider bg-emeraldGlow/10 px-3 py-1 rounded-full">Pro Semi-Annual</span>
+              <span class="text-emeraldGlow text-xs font-mono font-bold">SAVE 20%</span>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white mb-2">Pro Plan (6 Months)</h3>
+            <p class="text-slate-300 text-xs leading-relaxed mb-6">Complete institutional suite for full derivatives trading across all major indices.</p>
+            <div class="font-mono mb-6">
+              <span class="text-4xl font-extrabold gradient-text-emerald">₹4,999.00</span>
+              <span class="text-slate-400 text-xs"> / 6 months</span>
+              <div class="text-[11px] text-emeraldGlow font-bold mt-1">Excludes 7-Day Free Trial</div>
+            </div>
+            <ul class="space-y-3 text-xs text-slate-200 font-mono mb-8">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> 2 Active Device Hardware Locks</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> All 5 Indices (Nifty, Bank Nifty, FinNifty, Midcap, Sensex)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Angel One, Kotak Neo, Groww, Upstox Ready</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Black-Scholes Greeks Engine (Delta, Theta, IV)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Single-Key ESC Global Panic Override</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Automated CSV Tradebook Journal</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Priority VIP Telegram Support</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> Max Drawdown Hard Stop</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emeraldGlow"></i> API Failure Auto-Fallback</li>
+            </ul>
+          </div>
+          <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" onclick="triggerRazorpayAction()" class="w-full py-4 rounded-2xl bg-gradient-to-r from-emeraldGlow to-cyanGlow font-heading font-extrabold text-sm text-black shadow-glow-emerald hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Get Pro Plan (₹4,999)</span>
+          </a>
+        </div>
+
+        <div class="glass-panel rounded-3xl p-8 border border-white/10 hover:border-purpleGlow/40 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-xs font-mono font-bold text-purpleGlow uppercase tracking-wider bg-purpleGlow/10 px-3 py-1 rounded-full">Founder Edition</span>
+              <span class="text-slate-400 text-xs font-mono">Lifetime</span>
+            </div>
+            <h3 class="font-heading text-2xl font-bold text-white mb-2">Founder's Club (Lifetime)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed mb-6">One-time payment for perpetual access with all future software updates included.</p>
+            <div class="font-mono mb-6">
+              <span class="text-4xl font-extrabold text-white">₹8,999.00</span>
+              <span class="text-slate-400 text-xs"> / perpetual</span>
+              <div class="text-[11px] text-purpleGlow font-bold mt-1">Excludes 7-Day Free Trial</div>
+            </div>
+            <ul class="space-y-3 text-xs text-slate-300 font-mono mb-8">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> Unlimited Device Transfers</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> All 5 Major Indices (NSE & BSE)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> Angel One, Kotak Neo, Groww, Upstox Connection</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> Custom Strike & Parameter Rules</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> Lifetime Free Version Upgrades</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> 1-on-1 Dedicated Setup & Onboarding</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> Priority Feature Request Access</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> Founder Badge in Telegram Community</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-purpleGlow"></i> All Pro Plan Features Included</li>
+            </ul>
+          </div>
+          <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" onclick="triggerRazorpayAction()" class="w-full py-4 rounded-2xl bg-white/10 hover:bg-purpleGlow hover:text-white font-heading font-bold text-sm text-white transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-infinity text-xs"></i>
+            <span>Join Founder's Club (₹8,999)</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto bg-slate-950/80 rounded-3xl p-8 border border-emeraldGlow/30 font-mono text-center space-y-4">
+        <div class="inline-flex items-center gap-2 text-xs font-bold text-emeraldGlow bg-emeraldGlow/10 px-4 py-1.5 rounded-full border border-emeraldGlow/30">
+          <i class="fa-solid fa-shield-check"></i>
+          <span>Razorpay 256-Bit SSL Encrypted Payment Gateway</span>
+        </div>
+        <h3 class="font-heading text-2xl font-bold text-white">Instant Pro License Key Dispatch</h3>
+        <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+          Click below to open our official Razorpay checkout page. Complete payment using UPI (GPay, PhonePe, Paytm), Cards, or NetBanking to receive your license key instantly via Email and SMS.
+        </p>
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" onclick="triggerRazorpayAction()" class="w-full sm:w-auto px-10 py-4 rounded-2xl bg-gradient-to-r from-emeraldGlow to-cyanGlow text-black font-heading font-extrabold text-base flex items-center justify-center gap-3 shadow-glow-emerald hover:scale-105 active:scale-95 transition-all">
+            <i class="fa-solid fa-lock text-black"></i>
+            <span>Proceed to Razorpay Checkout</span>
+          </a>
+        </div>
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-6 text-[11px] text-slate-400">
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-emeraldGlow"></i> Instant Key Delivery</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-gift text-cyanGlow"></i> 7-Day Free Trial Included</span>
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield text-purpleGlow"></i> Payment ID: pl_TPA66rPF8H6ULI</span>
+        </div>
+      </div>
+
+      <div class="mt-20">
+        <h3 class="font-heading text-3xl font-extrabold text-white text-center mb-12">Plan Comparison</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left font-mono text-sm">
+            <thead>
+              <tr class="border-b border-white/10 text-slate-400">
+                <th class="py-4 px-4 w-1/3">Feature</th>
+                <th class="py-4 px-4 text-center text-cyanGlow">Tester (₹999/mo)</th>
+                <th class="py-4 px-4 text-center text-emeraldGlow">Pro (₹4,999/6mo)</th>
+                <th class="py-4 px-4 text-center text-purpleGlow">Founder (₹8,999/Life)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 text-slate-300">
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">Indices Covered</td><td class="py-4 px-4 text-center">3 (Nifty, BN, FN)</td><td class="py-4 px-4 text-center text-emeraldGlow">All 5</td><td class="py-4 px-4 text-center text-purpleGlow">All 5</td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">Device Licenses</td><td class="py-4 px-4 text-center">1</td><td class="py-4 px-4 text-center">2</td><td class="py-4 px-4 text-center text-purpleGlow">Unlimited</td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">Greeks Engine</td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">Panic Kill-Switch</td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">CSV Tradebook</td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">Max Drawdown Stop</td><td class="py-4 px-4 text-center text-slate-400"><i class="fa-solid fa-xmark"></i></td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">API Fallback</td><td class="py-4 px-4 text-center text-slate-400"><i class="fa-solid fa-xmark"></i></td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">VIP Support</td><td class="py-4 px-4 text-center text-slate-400"><i class="fa-solid fa-xmark"></i></td><td class="py-4 px-4 text-center text-emeraldGlow"><i class="fa-solid fa-check"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">Lifetime Updates</td><td class="py-4 px-4 text-center text-slate-400"><i class="fa-solid fa-xmark"></i></td><td class="py-4 px-4 text-center text-slate-400"><i class="fa-solid fa-xmark"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+              <tr class="hover:bg-white/5"><td class="py-4 px-4 font-bold">1-on-1 Onboarding</td><td class="py-4 px-4 text-center text-slate-400"><i class="fa-solid fa-xmark"></i></td><td class="py-4 px-4 text-center text-slate-400"><i class="fa-solid fa-xmark"></i></td><td class="py-4 px-4 text-center text-purpleGlow"><i class="fa-solid fa-check"></i></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="relative border-t border-white/10 pt-16 pb-12 z-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="p-6 rounded-2xl bg-rose-500/5 border border-rose-500/20 text-slate-300 text-xs leading-relaxed mb-12">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-triangle-exclamation text-crimsonAlert text-base mt-0.5"></i>
+          <div>
+            <strong class="text-white block mb-1">Regulatory & Financial Risk Disclosure:</strong>
+            Algo Intraday is exclusively a software automation utility designed for algorithmic execution assistance across index derivatives. We are <strong>NOT a SEBI registered investment advisor or research analyst</strong>. Derivatives (Futures & Options) trading involves substantial financial risk of loss. Past performance simulations do not guarantee future profitability. All trade parameters, position sizes, and risk controls are determined exclusively by the end-user. <strong>No Refunds:</strong> Due to the digital nature of this software and instant license generation, ALL SALES ARE FINAL.
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-xl bg-slate-900 border border-cyanGlow/30 p-0.5 flex items-center justify-center overflow-hidden"><img src="../logo.png" alt="Logo" class="w-full h-full object-contain rounded-lg"  /></div>
+          <span class="text-slate-400 font-medium">© 2026 Algo Intraday Architecture. Built for disciplined algorithmic index traders.</span>
+        </div>
+        <div class="flex items-center gap-6 text-slate-400">
+          <a href="../index.html" class="hover:text-cyanGlow transition-colors">Home</a>
+          <a href="../features" class="hover:text-cyanGlow transition-colors">Features</a>
+          <a href="../pricing" class="hover:text-emeraldGlow transition-colors font-bold text-emeraldGlow">Pricing</a>
+          <a href="../brokers" class="hover:text-cyanGlow transition-colors">Brokers</a>
+          <a href="../faq" class="hover:text-cyanGlow transition-colors">FAQ</a>
+          <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" onclick="triggerRazorpayAction()" class="hover:text-emeraldGlow transition-colors font-bold text-emeraldGlow">Get License</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const SoundFX = {
+      ctx: null, enabled: true,
+      init() { if (!this.ctx && (window.AudioContext || window.webkitAudioContext)) { this.ctx = new (window.AudioContext || window.webkitAudioContext)(); } },
+      playTone(freq, type, duration, gainVal = 0.08) { if (!this.enabled) return; try { this.init(); if (!this.ctx) return; if (this.ctx.state === 'suspended') this.ctx.resume(); const osc = this.ctx.createOscillator(); const gain = this.ctx.createGain(); osc.type = type; osc.frequency.setValueAtTime(freq, this.ctx.currentTime); gain.gain.setValueAtTime(gainVal, this.ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration); osc.connect(gain); gain.connect(this.ctx.destination); osc.start(); osc.stop(this.ctx.currentTime + duration); } catch(e) {} },
+      click() { this.playTone(850, 'sine', 0.06, 0.04); },
+      win() { this.playTone(587.33, 'triangle', 0.1, 0.06); setTimeout(() => this.playTone(739.99, 'triangle', 0.12, 0.07), 90); setTimeout(() => this.playTone(880.00, 'triangle', 0.2, 0.08), 180); }
+    };
+    function triggerRazorpayAction() { SoundFX.win(); if (window.confetti) { window.confetti({ particleCount: 90, spread: 75, origin: { y: 0.65 }, colors: ['#00f2fe', '#00ff87', '#8a2be2', '#ffffff'] }); } }
+    const canvas = document.getElementById('three-canvas');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const candleGroup = new THREE.Group();
+    const greenMat = new THREE.MeshBasicMaterial({ color: 0x00ff87, wireframe: true, transparent: true, opacity: 0.35 });
+    const redMat = new THREE.MeshBasicMaterial({ color: 0xff3366, wireframe: true, transparent: true, opacity: 0.35 });
+    for (let i = 0; i < 38; i++) {
+      const isGreen = Math.random() > 0.45;
+      const height = Math.random() * 1.8 + 0.5;
+      const body = new THREE.Mesh(new THREE.BoxGeometry(0.35, height, 0.35), isGreen ? greenMat : redMat);
+      const wick = new THREE.Mesh(new THREE.CylinderGeometry(0.02, 0.02, height + 1.2, 6), isGreen ? greenMat : redMat);
+      const candle = new THREE.Group();
+      candle.add(body); candle.add(wick);
+      candle.position.set((Math.random() - 0.5) * 24, (Math.random() - 0.5) * 14, (Math.random() - 0.5) * 10 - 2);
+      candle.userData = { speedY: (Math.random() * 0.008) + 0.003, rotSpeed: (Math.random() - 0.5) * 0.01 };
+      candleGroup.add(candle);
+    }
+    scene.add(candleGroup);
+    const nexusCoreGroup = new THREE.Group();
+    const icoMesh = new THREE.Mesh(new THREE.IcosahedronGeometry(2.0, 1), new THREE.MeshBasicMaterial({ color: 0x00f2fe, wireframe: true, transparent: true, opacity: 0.45 }));
+    nexusCoreGroup.add(icoMesh);
+    const ring1Mesh = new THREE.Mesh(new THREE.TorusGeometry(3.0, 0.03, 16, 100), new THREE.MeshBasicMaterial({ color: 0x8a2be2, wireframe: true, transparent: true, opacity: 0.5 }));
+    nexusCoreGroup.add(ring1Mesh);
+    const ring2Mesh = new THREE.Mesh(new THREE.TorusGeometry(3.8, 0.02, 16, 100), new THREE.MeshBasicMaterial({ color: 0x00ff87, wireframe: true, transparent: true, opacity: 0.35 }));
+    ring2Mesh.rotation.x = Math.PI / 3;
+    nexusCoreGroup.add(ring2Mesh);
+    nexusCoreGroup.position.set(4.2, -1, -3);
+    scene.add(nexusCoreGroup);
+    camera.position.z = 6;
+    let mouseX = 0, mouseY = 0, targetMouseX = 0, targetMouseY = 0;
+    window.addEventListener('mousemove', (e) => { targetMouseX = (e.clientX / window.innerWidth - 0.5) * 1.2; targetMouseY = (e.clientY / window.innerHeight - 0.5) * 1.2; });
+    window.addEventListener('resize', () => { camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); });
+    const clock = new THREE.Clock();
+    function animate3DScene() { requestAnimationFrame(animate3DScene); const elapsed = clock.getElapsedTime(); mouseX += (targetMouseX - mouseX) * 0.05; mouseY += (targetMouseY - mouseY) * 0.05; icoMesh.rotation.x = elapsed * 0.25; icoMesh.rotation.y = elapsed * 0.35; ring1Mesh.rotation.y = elapsed * 0.4; ring1Mesh.rotation.x = elapsed * 0.2; ring2Mesh.rotation.z = elapsed * 0.3; scene.children.forEach(c => { if (c.userData?.speedY) { c.position.y += c.userData.speedY; c.rotation.y += c.userData.rotSpeed; if (c.position.y > 8) c.position.y = -8; } }); scene.rotation.y = mouseX * 0.35; scene.rotation.x = -mouseY * 0.35; renderer.render(scene, camera); }
+    animate3DScene();
+  </script>
+</body>
+</html>
+
+
+
+
+
+

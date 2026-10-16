@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nifty &amp; Bank Nifty Expiry Day Gamma Blast Option Buying Algo — Algo Intraday</title>
+  <meta name="description" content="Capture Nifty 50, Bank Nifty, FinNifty &amp; Sensex expiry day Gamma Blast breakouts with sub-15ms CE/PE execution, automated SL trailing, and zero emotional slippage.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://algointraday.netlify.app/bank-nifty-gamma-blast-expiry-algo.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { background: #020617; color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-heading { font-family: 'Space Grotesk', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .glass { background: rgba(15, 23, 42, 0.78); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.09); }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+  <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between border-b border-white/10">
+    <a href="/" class="flex items-center gap-3 font-heading font-extrabold text-xl text-white">
+      <img src="logo.png" alt="Algo Intraday Logo" width="36" height="36" class="rounded-lg" />
+      <span>Algo<span class="text-cyan-400">Intraday</span></span>
+    </a>
+    <div class="flex items-center gap-4 text-xs sm:text-sm font-mono">
+      <a href="/" class="text-slate-300 hover:text-cyan-400">← Back to Home</a>
+      <a href="https://rzp.io/rzp/v5WqsSx" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-emerald-400 text-black font-bold">Get Pro License</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-14 space-y-12">
+    <div class="space-y-4">
+      <span class="text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/30">Expiry Day Momentum Execution</span>
+      <h1 class="font-heading text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+        Nifty &amp; Bank Nifty Expiry Day Gamma Blast Option Buying Algo
+      </h1>
+      <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+        On weekly expiry days (Nifty Thursday, Bank Nifty / FinNifty / Sensex expiry sessions), ATM and slightly OTM Call (CE) and Put (PE) strikes experience rapid <strong>Gamma acceleration</strong>. A 2-second manual click delay can ruin your risk-to-reward ratio. Here is how Indian intraday option buyers automate expiry breakouts with sub-15ms execution.
+      </p>
+    </div>
+
+    <section class="glass rounded-3xl p-8 space-y-6">
+      <h2 class="font-heading text-2xl font-bold text-white">Why Manual Option Buyers Lose on Expiry Breakouts</h2>
+      <div class="grid sm:grid-cols-3 gap-4 text-sm">
+        <div class="p-4 rounded-2xl bg-slate-900/90 border border-white/10">
+          <div class="font-mono text-rose-400 font-bold mb-1">01. Entry Slippage</div>
+          <p class="text-slate-300 text-xs leading-relaxed">When Nifty breaks day-high, a ₹25 CE premium jumps to ₹42 in 800 milliseconds before manual order confirmation completes.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/90 border border-white/10">
+          <div class="font-mono text-amber-400 font-bold mb-1">02. Theta Crush</div>
+          <p class="text-slate-300 text-xs leading-relaxed">Holding an expiry option through a 15-minute sideways pullback erodes 30%–45% of premium due to rapid afternoon Theta decay.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-900/90 border border-white/10">
+          <div class="font-mono text-emerald-400 font-bold mb-1">03. Sub-15ms Solution</div>
+          <p class="text-slate-300 text-xs leading-relaxed">Algo Intraday monitors live WebSocket ticks and dispatches your CE/PE order in under 15ms with an immediate hard Stop-Loss lock.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass rounded-3xl p-8 space-y-4">
+      <h2 class="font-heading text-2xl font-bold text-white">Recommended Greek Parameters for Expiry Scalping</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left font-mono text-xs sm:text-sm">
+          <thead class="border-b border-white/10 text-cyan-400">
+            <tr>
+              <th class="py-3">Parameter</th>
+              <th class="py-3">Morning Session (9:20–11:30)</th>
+              <th class="py-3">Afternoon Gamma Window (1:45–3:10)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/10 text-slate-200">
+            <tr>
+              <td class="py-3 font-bold">Ideal Delta Range</td>
+              <td class="py-3">0.48 to 0.58 (ATM / Slight ITM)</td>
+              <td class="py-3">0.38 to 0.52 (ATM Gamma Sweet Spot)</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold">Gamma Sensitivity</td>
+              <td class="py-3">Moderate (0.0020 – 0.0035)</td>
+              <td class="py-3">High (&gt; 0.0045 Spike Alert)</td>
+            </tr>
+            <tr>
+              <td class="py-3 font-bold">Stop-Loss Rule</td>
+              <td class="py-3">10%–15% Premium Hard SL + Trail</td>
+              <td class="py-3">Strict Point-Based SL + ESC Panic Switch Ready</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="glass rounded-3xl p-8 text-center space-y-4 border border-emerald-400/40">
+      <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-white">Test Expiry Execution Risk-Free in Paper Mode</h2>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto">Download Algo Intraday for Windows 10/11 and test your Nifty &amp; Bank Nifty expiry rules on live market ticks with a 7-Day Free Trial.</p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="/#download" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-heading font-extrabold text-sm">Download .EXE (7-Day Free Trial)</a>
+        <a href="/#license" class="px-6 py-3.5 rounded-2xl bg-white/10 text-white font-heading font-bold text-sm">View Pro Plans (From ₹999)</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

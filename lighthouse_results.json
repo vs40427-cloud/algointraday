@@ -1,0 +1,20 @@
+{
+  "https://autotradenexus.netlify.app/": {
+    "error": "CDPSession.send: Protocol error (Lighthouse.enable): 'Lighthouse.enable' wasn't found"
+  },
+  "https://autotradenexus.netlify.app/features": {
+    "error": "CDPSession.send: Protocol error (Lighthouse.enable): 'Lighthouse.enable' wasn't found"
+  },
+  "https://autotradenexus.netlify.app/pricing": {
+    "error": "CDPSession.send: Protocol error (Lighthouse.enable): 'Lighthouse.enable' wasn't found"
+  },
+  "https://autotradenexus.netlify.app/brokers": {
+    "error": "CDPSession.send: Protocol error (Lighthouse.enable): 'Lighthouse.enable' wasn't found"
+  },
+  "https://autotradenexus.netlify.app/faq": {
+    "error": "CDPSession.send: Protocol error (Lighthouse.enable): 'Lighthouse.enable' wasn't found"
+  },
+  "https://autotradenexus.netlify.app/blog": {
+    "error": "CDPSession.send: Protocol error (Lighthouse.enable): 'Lighthouse.enable' wasn't found"
+  }
+}
